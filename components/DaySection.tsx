@@ -77,13 +77,13 @@ export function DaySection({ dayData, onDeleteMeal, onResetDay }: DaySectionProp
             </div>
             <div className="flex flex-wrap gap-1 justify-end">
               <Badge variant="secondary" className="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs">
-                {totalMacros.carbs.toFixed(1).replace(/\.?0+$/, '').toLocaleString('en-US')}g carbs
+                {totalMacros.carbs.toLocaleString('en-US', { maximumFractionDigits: 1 })}g carbs
               </Badge>
               <Badge variant="secondary" className="bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 text-xs">
-                {totalMacros.protein.toFixed(1).replace(/\.?0+$/, '').toLocaleString('en-US')}g protein
+                {totalMacros.protein.toLocaleString('en-US', { maximumFractionDigits: 1 })}g protein
               </Badge>
               <Badge variant="secondary" className="bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 text-xs">
-                {totalMacros.fat.toFixed(1).replace(/\.?0+$/, '').toLocaleString('en-US')}g fat
+                {totalMacros.fat.toLocaleString('en-US', { maximumFractionDigits: 1 })}g fat
               </Badge>
             </div>
           </div>
